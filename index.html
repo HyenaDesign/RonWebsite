@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ron is a tiny AI companion for your Windows desktop. A lightweight floating widget powered by your own OpenAI API key."
+    />
+    <title>Ron | Tiny AI Companion for Windows</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Ron home">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>Ron</span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="#features">Features</a>
+        <a href="#privacy">API key</a>
+        <a href="#safety">Safety</a>
+        <a href="#build">Build</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">Windows desktop companion</p>
+          <h1>Ron is a tiny AI companion for your Windows desktop.</h1>
+          <p class="lead">
+            Ron lives as a small floating widget, answers quick questions, hides
+            or appears with <kbd>Ctrl</kbd> + <kbd>Space</kbd>, and uses your own
+            OpenAI API key. Small companion, honest boundaries, useful presence.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="#build">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 20h14" />
+              </svg>
+              Download or build Ron
+            </a>
+            <a class="button button-secondary" href="#setup">Read setup notes</a>
+          </div>
+          <div class="quick-facts" aria-label="Ron quick facts">
+            <span>Unsigned Windows build</span>
+            <span>Local key storage</span>
+            <span>No bundled API key</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Mockup of Ron's floating widget">
+          <div class="desktop-pin"></div>
+          <div class="ron-widget">
+            <div class="widget-topbar">
+              <div class="app-name">
+                <span class="window-dot" aria-hidden="true"></span>
+                <span class="widget-title">Ron</span>
+              </div>
+              <div class="model-status">
+                <span>AI-01</span>
+                <span class="status-light" aria-hidden="true"></span>
+              </div>
+              <div class="widget-controls" aria-hidden="true">
+                <span>
+                  <svg viewBox="0 0 24 24"><path d="m8 4 8 8m0-8-8 8M12 8v11" /></svg>
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0-5v3m0 12v3M4.2 4.2l2.1 2.1m11.4 11.4 2.1 2.1M3 12h3m12 0h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" /></svg>
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24"><path d="M7 12h10" /></svg>
+                </span>
+              </div>
+            </div>
+            <div class="screen-labels" aria-hidden="true">
+              <span>ASK</span>
+              <span>LIVE</span>
+            </div>
+            <div class="face-screen" aria-label="Animated face screen mockup">
+              <div class="eye eye-left"></div>
+              <div class="eye eye-right"></div>
+              <div class="mouth"></div>
+            </div>
+            <div class="response-bubble">
+              <span>Ron online. I am an AI companion, not a doctor or lawyer.</span>
+            </div>
+            <label class="ask-row" for="ask-demo">
+              <input id="ask-demo" placeholder="Ask anything..." readonly />
+              <span aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4zM22 2 11 13" /></svg>
+              </span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell compact-intro" aria-label="What Ron is">
+        <p>
+          Ron is lightweight by design: Electron, React, TypeScript, a tiny
+          desktop surface, and streamed OpenAI Chat Completions through the main
+          process. It keeps only a short recent-turn memory, because a desk buddy
+          does not need to pretend it is your whole life.
+        </p>
+      </section>
+
+      <section id="features" class="section-shell feature-section">
+        <div class="section-heading">
+          <p class="eyebrow">Concrete little jobs</p>
+          <h2>Built like a handy desktop tool.</h2>
+          <p>
+            Ron stays compact, visible when wanted, quiet when not, and plain
+            about the knobs you can turn.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 5h14v10H5zM8 19h8M12 15v4" /></svg>
+            <h3>Floating widget</h3>
+            <p>Small frameless window with always-visible controls and a compact rounded shape.</p>
+          </article>
+          <article class="feature-card">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 3h8v4h5v14H3V7h5zM8 7h8M7 13h10M7 17h6" /></svg>
+            <h3>Window manners</h3>
+            <p>Drag it around, minimize it to tray, or keep it above other windows.</p>
+          </article>
+          <article class="feature-card">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 8h12M6 16h12M8 4v16M16 4v16" /></svg>
+            <h3>Ctrl+Space</h3>
+            <p>Use the global hotkey to show or hide Ron without hunting for the widget.</p>
+          </article>
+          <article class="feature-card">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 10h.01M16 10h.01M7 16c2.5 2 7.5 2 10 0M4 7l2-3M20 7l-2-3M5 7h14v12H5z" /></svg>
+            <h3>Animated face states</h3>
+            <p>Idle, sleeping, thinking, happy, amused, and confused states make status readable.</p>
+          </article>
+          <article class="feature-card">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16v10H7l-3 3zM8 9h8M8 12h5" /></svg>
+            <h3>Quick questions</h3>
+            <p>Compact input, streamed responses, and expandable long answers keep the flow fast.</p>
+          </article>
+          <article class="feature-card">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0-5v3m0 12v3M4.2 4.2l2.1 2.1m11.4 11.4 2.1 2.1M3 12h3m12 0h3" /></svg>
+            <h3>Practical settings</h3>
+            <p>Set API key, model, startup, sound, voice, always-on-top, and conversation reset.</p>
+          </article>
+          <article class="feature-card">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 11V8a5 5 0 0 1 10 0v3M5 11h14v10H5zM12 15v3" /></svg>
+            <h3>Local key storage</h3>
+            <p>Stores your API key locally with Electron safeStorage when available.</p>
+          </article>
+          <article class="feature-card">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M10 11v6M14 11v6M6 7l1 14h10l1-14" /></svg>
+            <h3>Clear API key</h3>
+            <p>Remove the saved key before sharing, selling, or disposing of a device.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="privacy" class="section-shell split-section">
+        <div>
+          <p class="eyebrow">API key privacy</p>
+          <h2>Your key, your device.</h2>
+          <p>
+            Ron does not ship with an API key. Every user must provide their own
+            OpenAI API key on first launch. The key is saved locally in Electron's
+            app data folder and should stay out of GitHub, packages, and public
+            places where secrets go to have a bad afternoon.
+          </p>
+        </div>
+        <div id="setup" class="note-panel">
+          <h3>First launch setup</h3>
+          <ol>
+            <li>Launch Ron.</li>
+            <li>Open settings with the gear icon.</li>
+            <li>Paste your OpenAI API key.</li>
+            <li>Click the check button.</li>
+          </ol>
+          <p>
+            Never commit API keys, <code>.env</code> files, packaged secrets, or
+            local app data.
+          </p>
+        </div>
+      </section>
+
+      <section id="safety" class="section-shell safety-section">
+        <div class="warning-stamp" aria-hidden="true">Clear boundary</div>
+        <div>
+          <p class="eyebrow">Safety notes</p>
+          <h2>Ron is a companion, not a professional.</h2>
+          <p>
+            Ron is not a doctor or lawyer. It should not provide medical advice,
+            legal advice, diagnoses, treatment instructions, medication dosing,
+            legal strategy, or interpretations of rights and obligations.
+          </p>
+          <p>
+            For medical or legal concerns, contact qualified professionals or
+            official sources. Ron can be useful company, but it should not be the
+            authority in high-stakes moments.
+          </p>
+        </div>
+      </section>
+
+      <section id="windows" class="section-shell split-section windows-section">
+        <div>
+          <p class="eyebrow">Unsigned Windows build</p>
+          <h2>SmartScreen may warn you.</h2>
+          <p>
+            Ron is distributed without an EV code-signing certificate. Windows
+            SmartScreen may show a blue warning screen when the app is opened.
+          </p>
+          <p class="strong-note">
+            Only run unsigned apps from sources you trust. If Ron arrives from an
+            unexpected source, do not run it.
+          </p>
+        </div>
+        <div class="note-panel">
+          <h3>If you trust the source</h3>
+          <ol>
+            <li>Click <strong>More info</strong>.</li>
+            <li>Confirm the publisher is unknown or unsigned.</li>
+            <li>Click <strong>Run anyway</strong>.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="build" class="section-shell build-section">
+        <div class="section-heading">
+          <p class="eyebrow">Developer notes</p>
+          <h2>Build Ron locally.</h2>
+          <p>
+            Ron requires Windows 10 or newer, Node.js 20+, npm, and an OpenAI API
+            key for actual use.
+          </p>
+        </div>
+        <div class="command-grid">
+          <div class="command-block">
+            <span>Install</span>
+            <code>npm install</code>
+          </div>
+          <div class="command-block">
+            <span>Run app</span>
+            <code>npm run dev</code>
+          </div>
+          <div class="command-block">
+            <span>Typecheck</span>
+            <code>npm run typecheck</code>
+          </div>
+          <div class="command-block">
+            <span>Build</span>
+            <code>npm run build</code>
+          </div>
+          <div class="command-block">
+            <span>Package Windows build</span>
+            <code>npm run package</code>
+          </div>
+        </div>
+        <p class="build-output">Build output is written to <code>build/release</code>.</p>
+      </section>
+
+      <section class="section-shell final-cta">
+        <div>
+          <p class="eyebrow">Ready when you are</p>
+          <h2>Try Ron as a small, honest desk companion.</h2>
+          <p>
+            Bring your own OpenAI API key, read the setup notes, and build or
+            download the Windows app from a source you trust.
+          </p>
+        </div>
+        <div class="final-actions">
+          <a class="button button-primary" href="#build">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 20h14" /></svg>
+            Get Ron
+          </a>
+          <a class="button button-secondary" href="#setup">Setup notes</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Ron</span>
+      <span>Tiny Windows companion. Bring your own key.</span>
+    </footer>
+  </body>
+</html>
